@@ -8,8 +8,8 @@ int main(void)
    printf("DOUBLE_MIN : %g\n", DBL_MIN);
    printf("DOUBLE_MAX : %g\n", DBL_MAX);
    printf("DOUBLE_DIG : %d\n", DBL_DIG);
-   printf("LONG_DOUBLE_MIN : %Lf\n", LDBL_MIN);
-   printf("LONG_DOUBLE_MAX : %Lf\n", LDBL_MAX);
+   printf("LONG_DOUBLE_MIN : %Le\n", LDBL_MIN);
+   printf("LONG_DOUBLE_MAX : %Le\n", LDBL_MAX);
    printf("LONG_DOUBLE_DIG : %d\n", LDBL_DIG);
    return 0;
 }
