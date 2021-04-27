@@ -8,17 +8,17 @@ int main(void)
     int ran, game=1;
     
     srand(time(NULL));
-    printf("가위(s) 바위(r) 보(p) 게임을 시작합니다.(게임종료 : 9)\n\n");
+    printf("가위(s) 바위(r) 보(p) 게임을 시작합니다. (게임종료 : 9)\n\n");
     
     while(game)
     {
         ran = rand()%3;
         if(ran==0)
-            ran = 's';
+            ran='s';
         else if(ran==1)
-            ran = 'r';
+            ran='r';
         else if(ran==2)
-            ran = 'p';
+            ran='p';
         //printf("%c\n",ran);
 
         while(1)
