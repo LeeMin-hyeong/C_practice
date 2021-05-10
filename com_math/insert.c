@@ -21,7 +21,7 @@ int main(void)
             else
                 break; //앞의 값이 크지 않을 경우 배열을 변경하지 않고 탈출.
         }
-        strcpy(cities[j+1], save); //올바른 위치에 삽입.(j가 for문을 탈출하면서 -1되므로 올바른 위치에 넣기 위해서는 +1을 해야 함)
+        strcpy(cities[j+1], save); //올바른 위치에 삽입.(j가 for문을 탈출하면서 -1되므로 올바른 위치에 넣기 위해서는 +1을 해야 한다)
     }
     printf("[Ascending order] : ");
     for(int i=0; i<10; i++)
