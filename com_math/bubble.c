@@ -3,7 +3,8 @@
 
 int main(void)
 {
-    char animals[10][10]={"Whale", "Lion", "Tiger", "Zebra", "Rabit", "Bear", "Dog", "Cat", "Fox", "Pig"};
+    char animals_asc[10][10]={"Whale", "Lion", "Tiger", "Zebra", "Rabit", "Bear", "Dog", "Cat", "Fox", "Pig"};
+    char animals_des[10][10]={"Whale", "Lion", "Tiger", "Zebra", "Rabit", "Bear", "Dog", "Cat", "Fox", "Pig"};
     char save[10];
     int count=0;
 
@@ -16,11 +17,11 @@ int main(void)
         count=0; //반복할 때마다 원소 순서 변경 횟수 카운트 초기화
         for(int i=0; i<9; i++)
         {
-          if(strcmp(animals[i], animals[i+1])>0) //앞이 큰 경우 양수 리턴
+          if(strcmp(animals_asc[i], animals_asc[i+1])>0) //앞이 큰 경우 양수 리턴
             {
-                strcpy(save, animals[i]);
-                strcpy(animals[i], animals[i+1]);
-                strcpy(animals[i+1], save);
+                strcpy(save, animals_asc[i]);
+                strcpy(animals_asc[i], animals_asc[i+1]);
+                strcpy(animals_asc[i+1], save);
                 count++; //원소의 순서를 변경하면 카운트
             }
         }
@@ -30,7 +31,7 @@ int main(void)
     printf("[Ascending order] : ");
     for(int i=0; i<10; i++)
     {
-        printf("%s", animals[i]);
+        printf("%s", animals_asc[i]);
         if(i<9)
             printf(", ");
     }
@@ -42,11 +43,11 @@ int main(void)
         count=0; //반복할 때마다 원소 순서 변경 횟수 카운트 초기화
         for(int i=0; i<9; i++)
         {
-          if(strcmp(animals[i], animals[i+1])<0) //앞이 작은 경우 음수 리턴
+          if(strcmp(animals_des[i], animals_des[i+1])<0) //앞이 작은 경우 음수 리턴
             {
-                strcpy(save, animals[i]);
-                strcpy(animals[i], animals[i+1]);
-                strcpy(animals[i+1], save);
+                strcpy(save, animals_des[i]);
+                strcpy(animals_des[i], animals_des[i+1]);
+                strcpy(animals_des[i+1], save);
                 count++; //원소의 순서를 변경하면 카운트함
             }
         }
@@ -56,7 +57,7 @@ int main(void)
     printf("[Descending order] : ");
     for(int i=0; i<10; i++)
     {
-        printf("%s", animals[i]);
+        printf("%s", animals_des[i]);
         if(i<9)
             printf(", ");
     }
